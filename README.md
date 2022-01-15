@@ -1,5 +1,8 @@
 # Shopify-Backend-Developer-Intern-Challenge
 A CRUD application to model an inventory database made with the Flask framework and Python for the Shopify Backend Developer Intern challenge.
+Runs on Python version 3.9.4+
+
+If you have not yet installed pip, see https://pip.pypa.io/en/stable/installation/ for instructions. 
 
 Once the git repo has been cloned and you are in the project directory, ensure that you have installed virtualenv. 
 
@@ -18,4 +21,9 @@ Once the git repo has been cloned and you are in the project directory, ensure t
 3. Install the requirements 
 
         pip install -r requirements.txt 
+
+4. To run the Flask server 
+
+        flask run 
+
 
