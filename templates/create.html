@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Item</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+<body>
+  <h1>Add Item</h1>
+  <div class="form-area">
+  <form action="{{url_for('create')}}" method="POST">
+    <div class="form-group">
+      <label>Item Name</label>
+      <br>
+      <input placeholder="Text, numbers, any characters" type="text" name="item_name">
+    </div>
+    <div class="form-group">
+      <label>Item Price (Ex. 20)</label>
+      <br>
+      <input placeholder="Item Price" name="item_price">
+    </div>
+    <div class="form-group">
+      <label>Item Quantity (Ex. 50)</label>
+      <br>
+      <input placeholder="Item Quantity" name="item_quantity">
+    </div>
+    <div class="form-group">
+      <label>Inventory Quantity Value (Ex. 45)</label>
+      <br>
+      <input placeholder="Calculated: ITEM PRICE * ITEM QUANTITY" name="item_inventory_value">
+    </div>
+    <button id="button" class="btn btn-warning" method="POST" type="submit">Add Item</button>
+  </form>
+</div>
+
+  {% if not inputIsValid %} 
+  <h5>Please fill out all fields with the correct input type.</h5>
+  {% endif %}
+  <a href="/"><button class="btn btn-warning">Back</button></a>
+</body>
+</html>

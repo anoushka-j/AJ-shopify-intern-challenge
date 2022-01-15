@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Item</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+
+</head>
+<body>
+  <h1>Edit Inventory</h1>
+  <table>
+    <tr>
+      <th>Item ID</th>
+      <th>Item Name</th>
+      <th>Item Price</th>
+      <th>Item Quantity</th>
+      <th>Item Inventory Value</th>
+    </tr>
+    {% for i in range(numItems)%}
+    <tr>
+      <td>{{items[i][0]}}</td>
+      <td>{{itemNames[i][0]}}</td>
+      <td>{{itemPrices[i][0]}}</td>
+      <td>{{itemQuantities[i][0]}}</td>
+      <td>{{inventoryItemValues[i][0]}}</td>
+      <td><a name="edit" href="{{url_for('editItem', itemId=items[i][0], itemName=itemNames[i][0], itemPrice=itemPrices[i][0], itemQuantity=itemQuantities[i][0], inventoryItemValue=inventoryItemValues[i][0])}}" method="POST"><button class="btn btn-warning">Edit</button></a></td>
+    </tr>
+    {% endfor %}
+  </table>
+  <a href="/"><button class="btn btn-warning">Back</button></a>
+</body>
+</html>

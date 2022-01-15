@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Explorer</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+<body>
+  <h1>Inventory</h1>
+  <div class="buttons">
+  <a href="create"><button class="btn btn-warning">Add Item</button></a>
+  <a href="edit"><button class="btn btn-warning">Edit Item</button></a>
+  <a href="delete"><button class="btn btn-warning">Delete Item</button></a>
+  <a href="list"><button class="btn btn-warning">View Inventory</button></a>
+  <a href="export"><button class="btn btn-warning">Export Inventory as CSV</button></a>
+</div>
+</body>
+</html>

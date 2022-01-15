@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Item</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+<body>
+  {% if initialState %}
+  <form action="{{url_for('editItem', itemId=itemId, itemName=current_item_name, itemQuantity=current_item_quantity, itemPrice=current_item_price, inventoryItemValue=current_item_inventory)}}" method="POST">
+    <div class="form-group">
+      <label>Item Name</label>
+      <input value = "{{current_item_name}}" type="text" name="item_name">
+    </div>
+    <div class="form-group">
+      <label>Item Price</label>
+      <input value = "{{current_item_price}}" name="item_price">
+    </div>
+    <div class="form-group">
+      <label>Item Quantity</label>
+      <input value = "{{current_item_quantity}}" name="item_quantity">
+    </div>
+    <div class="form-group">
+      <label>Inventory Quantity</label>
+      <input value = "{{current_item_inventory}}" name="item_inventory_value">
+    </div>
+    <button method="POST" type="submit" class="btn btn-warning" >Save</button></a>
+  </form>
+  {% endif %}
+
+  {% if not inputIsValid %}
+  
+  <h5>Please enter the valid form of data</h5>
+  {% endif %}
+
+  {% if editsSaved%}
+
+  <h4>Your edits were saved.</h4>
+  {% endif %}
+  <a href="edit"><button class="btn btn-warning">Back</button></a>
+
+</body>
+</html>

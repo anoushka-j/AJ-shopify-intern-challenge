@@ -1,0 +1,70 @@
+body {
+  background-color: lightblue;
+  margin: 10px 15px 15px 15px; 
+}
+
+h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+.buttons {
+  justify-content: center;
+  margin: 0
+}
+
+input, label {
+  justify-content: center;
+}
+.form-area{
+  padding-top : 30px;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+
+input {
+  width : 100%
+}
+
+a {
+  text-align: center;
+  justify-content: center;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: black; 
+  text-decoration : none;
+}
+
+button {
+  text-align: center;
+  justify-content: center;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+th, td {
+  text-align: center;
+  padding-left: 15px;
+
+}
+
+th {
+  padding-top: 40px;
+}
+
+table {
+  margin-left: 25%;
+}
+
+h5 {
+  padding-top: 10px; 
+  padding-bottom: 10px;
+  text-align: center;
+  color: red;
+}
+
+h4 {
+  text-align: center;
+}

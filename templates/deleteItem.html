@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delete Item</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+<body>
+  <p>Are you sure you want to delete this item?</p>
+  {% if not deleted %}
+  <a href="{{url_for('deleteItem', itemId=itemId, delete_affirmative=True)}}"><button class="btn btn-warning">Yes</button></a>
+  <a href="delete"><button class="btn btn-warning">Back</button></a>
+
+  {% else %}
+  <a href="delete"><button class="btn btn-warning">Back</button></a>
+  {% endif %}
+</body>
+</html>
