@@ -27,3 +27,6 @@ Once the git repo has been cloned and you are in the project directory, ensure t
         flask run 
 
 
+5. To deactivate the virtual env  
+
+        deactivate
