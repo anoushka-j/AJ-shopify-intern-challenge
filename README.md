@@ -1,7 +1,11 @@
 # Shopify-Backend-Developer-Intern-Challenge
 A CRUD application to model an inventory database made with the Flask framework and Python for the Shopify Backend Developer Intern challenge.
 
-Once the git repo has been cloned and you are in the project directory: 
+Once the git repo has been cloned and you are in the project directory, ensure thst you have installed virtualenv. 
+
+        pip install virtualenv
+
+
 
 1. Create a virtual env in the directory 
 
